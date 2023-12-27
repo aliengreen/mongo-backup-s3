@@ -35,7 +35,7 @@ docker run \
 
 ### Automatic Periodic Backups
 
-You can also set the `SCHEDULE` environment variable, for example, `-e SCHEDULE="@daily"`, to run the backup automatically at specified intervals.
+You can also set the `SCHEDULE` environment variable, for example, `-e SCHEDULE="@every 24h"`, to run the backup automatically at specified intervals.
 
 More information about the intervals can be found [here](http://godoc.org/github.com/robfig/cron#hdr-Predefined_schedules).
 
@@ -92,6 +92,7 @@ To see all available versions: https://hub.docker.com/r/aliengreenllc/mongo-back
 ## Limitations
 
 - There is no support for database usernames and passwords, but it can be easily added. Unfortunately, I don't have the time to test and implement this functionality at the moment.
+- Currently, intervals specified as `@every <duration>` are functioning correctly. However, I'm unsure why `@daily`, `@hourly`, etc., are not working as expected. You can find a list of all available intervals [here](http://godoc.org/github.com/robfig/cron#hdr-Predefined_schedules).
 
 
 

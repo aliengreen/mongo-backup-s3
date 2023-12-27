@@ -1,5 +1,5 @@
-# FROM alpine:latest
-FROM alpine:latest
+# FROM webdevops/go-crond:main-alpine
+FROM webdevops/go-crond:main-alpine
 LABEL org.opencontainers.image.authors="Alien Green LLC"
 
 ADD install.sh install.sh
@@ -23,6 +23,7 @@ ENV SCHEDULE **None**
 
 ADD run.sh run.sh
 ADD backup.sh backup.sh
+RUN chmod +x backup.sh run.sh
 
 ENTRYPOINT []
 CMD ["sh", "run.sh"]

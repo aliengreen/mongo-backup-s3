@@ -4,7 +4,7 @@
 set -eo pipefail
 
 apk update
-apk add openssl aws-cli 
+apk add openssl aws-cli
 apk add mongodb-tools
 
 # cleanup

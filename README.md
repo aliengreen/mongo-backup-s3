@@ -85,7 +85,7 @@ backdb-backup:
 
 This snipet defines a service named `backdb-backup` for backing up a MongoDB database using the `aliengreenllc/mongo-backup-s3`  image. The backup service is configured to store backups in an S3 bucket hosted on AWS or DigitalOcean Spaces. The minimal configuration includes specifying the S3 endpoint, access key ID, secret access key, S3 bucket name, S3 prefix (which serves as the folder name in the bucket), MongoDB host, and the name of the MongoDB database to be backed up. Additionally, the service is connected to a network named `db_network`, which should be the same network where the MongoDB database container is running. The `S3_PREFIX` parameter effectively corresponds to the folder within the specified `S3_BUCKET`.
 
-To see all available versions: <https://hub.docker.com/r/aliengreenllc/mongo-backup-s3/tags/>
+To see all available versions: https://hub.docker.com/r/aliengreenllc/mongo-backup-s3/tags/
 
 
 
